@@ -8,10 +8,17 @@ Basically, when the game decides it's time for an event, it rolls a number. Then
 - If the event happened, it stops processing and resets the event timer. If not, it continues to the next event in sequence.
 
 Now, that sounds on the surface like it's a pretty good way of handling it. The probabilities don't have to be whole numbers, they don't have to add up to 100%, it's all pretty flexible.
-So, why does that make the chance of a micrometeoroid impacts suddenly become enormous? Because it subtracts the chance of the event happening whether or not it happens.
+So, why does that make the chance of a micrometeoroid impacts suddenly become enormous? Because it subtracts the chance of the event happening *whether or not* it happens.
 This effectively makes every event which isn't elligible to happen add its chance to the next event, and it stacks.
 
-While I don't know for sure whether or not this is by design, it really feels to me like a bug. So I fixed it.
+While I don't know for sure whether or not this is by design, it *really* feels to me like a bug. So I fixed it.
 
 This mod makes it so that if an event was rolled, it stops processing and resets the timer, whether or not it was elligible to happen.
 It's done in a way that should be pretty low-impact and forwards-compatible with future versions, too.
+
+
+
+Use of AI:
+This was created *despite* the help of AI.
+I tried Visual Studio's built-in Copilot AI to help solve some weird compile issues, and not only was it not able to solve them, it made things worse.
+So I reverted everything it did and figured it out myself.
